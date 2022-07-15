@@ -29,7 +29,6 @@ ul.new-movie-container{
     list-style: none;
     gap: 16px;
     width: 1045px;
-    overflow: auto;
     background-color: rgb(37, 33, 33);
     padding: 16px;
     border-radius: 32px;

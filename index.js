@@ -70,7 +70,8 @@ class MovieList {
         }
     }
     run = async () => {
-        this.storedData = await this.retrieveApiData();        await this.renderItemList();
+        this.storedData = await this.retrieveApiData(); 
+        await this.renderItemList();
     }
 
 }
