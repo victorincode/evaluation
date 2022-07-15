@@ -62,9 +62,9 @@ class MovieList{
             movieImage.src = this.storedData[i].imgUrl;
             movieElement.append(movieImage);
             const movieName = document.createElement("p");
-            movieName.innerText = `Movie: ${this.storedData[i].name}`;
+            movieName.innerHTML = `<b>${this.storedData[i].name}</b>`;
             const movieInfo = document.createElement("p");
-            movieInfo.innerText = `Info: ${this.storedData[i].outlineInfo}`;
+            movieInfo.innerText = `${this.storedData[i].outlineInfo}`;
             movieElement.append(movieName);
             movieElement.append(movieInfo);
             movieContainer.append(movieElement);
