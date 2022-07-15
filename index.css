@@ -53,11 +53,14 @@ li{
 button.left-arrow, button.right-arrow{
     position: fixed;
     top: 50%;
-    background-color: white;
     border: none;
     height: 48px;
     width: 48px;
     border-radius: 24px;
+    background-color: black;
+    color: white;
+    font-size: 16pt;
+    border: 1px solid white;
 }
 img{
     width: var(--width-movie-image);
