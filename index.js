@@ -27,7 +27,7 @@ class MovieList{
     moveLeft = () => {
         const movieContainer = document.getElementById("new-movie-container");
         movieContainer.scrollBy(this.#scrollWidth * -1,0);  
-        if(movieContainer.scrollLeft == 0){
+                if(movieContainer.scrollLeft == 0){
             const leftArrow = document.getElementById("left-arrow");
             leftArrow.style.display = "";
         } 

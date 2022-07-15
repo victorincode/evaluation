@@ -10,22 +10,28 @@ body, html{
     height: 100vh;
 }
 body{
-    background-color: green;
+    background-color: black;
 }
 .main-container{
     display: flex;
     margin: auto;
     width: 100%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 ul.new-movie-container{
+    scroll-behavior: smooth;
     display: flex;
     margin: 16px;
     list-style: none;
     gap: 16px;
-    width: 1050px;
+    width: 1045px;
     overflow: auto;
+    background-color: rgb(37, 33, 33);
+    padding: 16px;
+    border-radius: 32px;
 }
 /* li{
     display: none;
@@ -55,6 +61,8 @@ button.left-arrow, button.right-arrow{
 }
 img{
     width: var(--width-movie-image);
+    border-radius: 16px;
+
 }
 button.left-arrow{
     left: 0;
@@ -63,9 +71,6 @@ button.left-arrow{
 button.right-arrow{
     right: 0;
 }
-
-
-
 
 p{
     color: white;
