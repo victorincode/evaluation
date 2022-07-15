@@ -32,6 +32,7 @@ ul.new-movie-container{
     background-color: rgb(37, 33, 33);
     padding: 16px;
     border-radius: 32px;
+    border: 1px solid rgb(45, 39, 39);
 }
 /* li{
     display: none;
@@ -65,6 +66,7 @@ button.left-arrow, button.right-arrow{
 img{
     width: var(--width-movie-image);
     border-radius: 16px;
+    border: 1px solid rgb(169, 160, 160);
 
 }
 button.left-arrow{
