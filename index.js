@@ -1,12 +1,12 @@
 
-class MovieList{
+class MovieList {
     #baseUrl = "http://localhost:4232/";
     #endUrl = "movies/";
     #amountToShow = 4;
     #currentIndex = 0;
     storedData = {};
     #scrollWidth = 270;
-    constructor(){
+    constructor() {
         this.init();
     }
     init = () => {
@@ -26,36 +26,35 @@ class MovieList{
     }
     moveLeft = () => {
         const movieContainer = document.getElementById("new-movie-container");
-        movieContainer.scrollBy(this.#scrollWidth * -1,0);  
-                if(movieContainer.scrollLeft == 0){
+        movieContainer.scrollBy(this.#scrollWidth * -1, 0);
+        if (movieContainer.scrollLeft == 0) {
             const leftArrow = document.getElementById("left-arrow");
             leftArrow.style.display = "";
-        } 
+        }
     }
     moveRight = () => {
         const leftArrow = document.getElementById("left-arrow");
-        if(leftArrow.style.display == "") leftArrow.style.display = "block";
+        if (leftArrow.style.display == "") leftArrow.style.display = "block";
         const movieContainer = document.getElementById("new-movie-container");
-        movieContainer.scrollBy(this.#scrollWidth,0);
-        console.log("scrolled");
+        movieContainer.scrollBy(this.#scrollWidth, 0);
     }
 
-    set index(newIndex){
+    set index(newIndex) {
         this.#currentIndex = newIndex;
     }
-    get index(){
+    get index() {
         return this.#currentIndex;
     }
 
     retrieveApiData = async () => {
         const data = await fetch(this.#baseUrl + this.#endUrl)
-        .then(response => response.json());
+            .then(response => response.json());
 
         return data;
     }
-    renderItemList = async() => {
+    renderItemList = async () => {
         const movieContainer = document.getElementById("new-movie-container");
-        for(let i=0; i<this.storedData.length; i++){
+        for (let i = 0; i < this.storedData.length; i++) {
             const movieElement = document.createElement("li");
 
             const movieImage = document.createElement("img");
@@ -71,9 +70,7 @@ class MovieList{
         }
     }
     run = async () => {
-        this.storedData = await this.retrieveApiData();
-        console.log(this.storedData);
-        await this.renderItemList();
+        this.storedData = await this.retrieveApiData();        await this.renderItemList();
     }
 
 }
